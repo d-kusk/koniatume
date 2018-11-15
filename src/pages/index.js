@@ -2,18 +2,40 @@ import React from 'react'
 import { Link } from 'gatsby'
 
 import Layout from '../components/layout'
-import Image from '../components/image'
 
-const IndexPage = () => (
+const IndexPage = ({data}) => (
   <Layout>
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: '300px', marginBottom: '1.45rem' }}>
-      <Image />
-    </div>
+    <section>
+      <h2>こにごはん</h2>
+      <Posts data={data} />
+    </section>
     <Link to="/page-2/">Go to page 2</Link>
   </Layout>
 )
 
+const Posts = ({ data }) => {
+  console.log(data);
+  return (
+    <div>
+      {data.allWordpressPost.edges.map(({ node }) => (
+        <div className="post-item">
+          <p>{node.title}</p>
+        </div>
+      ))}
+    </div>
+  )
+}
+
 export default IndexPage
+
+export const pageQuery = graphql`
+  query MyFiles {
+    allWordpressPost {
+      edges {
+        node {
+          title
+        }
+      }
+    }
+  }
+`;
