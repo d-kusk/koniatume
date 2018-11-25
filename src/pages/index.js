@@ -19,6 +19,7 @@ const Posts = ({ data }) => {
     <div>
       {data.allWordpressPost.edges.map(({ node }) => (
         <div className="post-item">
+          <time>{node.date}</time>
           <p>{node.title}</p>
         </div>
       ))}
@@ -33,7 +34,8 @@ export const pageQuery = graphql`
     allWordpressPost {
       edges {
         node {
-          title
+          title,
+          date(formatString: "MMMM DD, YYYY")
         }
       }
     }
