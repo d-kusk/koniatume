@@ -4700,7 +4700,7 @@ gatsby-react-router-scroll@^2.0.1:
     scroll-behavior "^0.9.9"
     warning "^3.0.0"
 
-gatsby-source-filesystem@^2.0.1, gatsby-source-filesystem@^2.0.4:
+gatsby-source-filesystem@^2.0.4, gatsby-source-filesystem@^2.0.8:
   version "2.0.8"
   resolved "https://registry.yarnpkg.com/gatsby-source-filesystem/-/gatsby-source-filesystem-2.0.8.tgz#0b84e2321673d3f68c43b4a3948a3819761fde84"
   dependencies:
@@ -4719,9 +4719,10 @@ gatsby-source-filesystem@^2.0.1, gatsby-source-filesystem@^2.0.4:
     valid-url "^1.0.9"
     xstate "^3.1.0"
 
-gatsby-source-wordpress@3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/gatsby-source-wordpress/-/gatsby-source-wordpress-3.0.0.tgz#78c56c871db1505ab198fd453dec26ceb16211a3"
+gatsby-source-wordpress@^3.0.14:
+  version "3.0.14"
+  resolved "https://registry.yarnpkg.com/gatsby-source-wordpress/-/gatsby-source-wordpress-3.0.14.tgz#003ac324e07135419bd203ec340738ffff37481c"
+  integrity sha512-jrD7eF7W0VJW+45NAMBfvBCs4aJski4B0d+H40VYyxwR2qBUlZZS53YcSbyMn5e0T0kTHdqM9ecY3kxgOD8vXw==
   dependencies:
     "@babel/runtime" "^7.0.0"
     axios "^0.18.0"
@@ -4729,7 +4730,7 @@ gatsby-source-wordpress@3.0.0:
     bluebird "^3.5.0"
     deep-map "^1.5.0"
     deep-map-keys "^1.2.0"
-    gatsby-source-filesystem "^2.0.1"
+    gatsby-source-filesystem "^2.0.8"
     json-stringify-safe "^5.0.1"
     lodash "^4.17.10"
     minimatch "^3.0.4"
