@@ -9,17 +9,19 @@ const IndexPage = ({data}) => (
       <h2>こにごはん</h2>
       <Posts data={data} />
     </section>
-    <Link to="/page-2/">Go to page 2</Link>
+    {/* <Link to="/page-2/">Go to page 2</Link> */}
   </Layout>
 )
 
 const Posts = ({ data }) => {
-  console.log(data);
   return (
     <div>
       {data.allWordpressPost.edges.map(({ node }) => (
-        <div className="post-item">
-          <p>{node.title}</p>
+        <div className="post-item" key={node.id}>
+          <time>{node.date}</time>
+          <p>
+            <Link to={node.slug}>{node.title}</Link>
+          </p>
         </div>
       ))}
     </div>
@@ -33,7 +35,10 @@ export const pageQuery = graphql`
     allWordpressPost {
       edges {
         node {
-          title
+          id,
+          slug,
+          title,
+          date(formatString: "MMMM DD, YYYY")
         }
       }
     }

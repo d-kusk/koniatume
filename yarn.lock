@@ -4722,6 +4722,7 @@ gatsby-source-filesystem@^2.0.1, gatsby-source-filesystem@^2.0.4:
 gatsby-source-wordpress@3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/gatsby-source-wordpress/-/gatsby-source-wordpress-3.0.0.tgz#78c56c871db1505ab198fd453dec26ceb16211a3"
+  integrity sha512-d2cx9TgAQN6Q3nsIbbWpy3CBmMMlo0exp9Qo3l9kW8OB8ydtd9OLoZEJuu6K8H51gdxe/jtP2HnqNHEHIZEYeg==
   dependencies:
     "@babel/runtime" "^7.0.0"
     axios "^0.18.0"
