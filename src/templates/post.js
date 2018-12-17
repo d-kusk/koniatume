@@ -3,8 +3,7 @@ import { Link } from 'gatsby'
 
 import Layout from '../components/layout'
 
-const SinglePage = ({ data, pathContext }) => {
-  console.log(data, pathContext);
+const SinglePage = ({ data, pageContext }) => {
   return (
     <Layout>
       <Post data={data} />
@@ -36,8 +35,8 @@ const Post = ({ data }) => {
 export default SinglePage
 
 export const pageQuery = graphql`
-  query ($id: Int) {
-    wordpressPost(wordpress_id: {eq: $id}) {
+  query($id: String!) {
+    wordpressPost(id: { eq: $id }) {
       wordpress_id,
       title,
       date(formatString: "MMMM DD, YYYY"),

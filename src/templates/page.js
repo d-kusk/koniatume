@@ -1,8 +1,6 @@
 import React, { Component } from "react"
 import { graphql } from "gatsby"
-import Layout from "../layouts"
-
-import { rhythm } from "../utils/typography"
+import Layout from '../components/layout'
 
 class PageTemplate extends Component {
   render() {
